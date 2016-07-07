@@ -3,7 +3,7 @@ menu() {
 	echo "******************************************************"
 	echo "**                 Script SABESP                    **"
 	echo "**   Buscar percentagem do volume dos reservatorios **"
-	echo "**   Buscar informações por meio do site da SABESP  **"
+	echo "**   Buscar informaÃ§Ãµes por meio do site da SABESP  **"
 	echo "**                                                  **"
 	echo "**   Criado por por Luiz Sales - lsales@lsales.biz  **"
 	echo "**                        22/10/2014                **"	                        
@@ -32,8 +32,8 @@ case $1 in
 	2) vol=`lynx -source http://www2.sabesp.com.br/mananciais/DivulgacaoSiteSabesp.aspx | grep "volume armazenado" | awk -F ">" '{print $4}'  | sed 's/%<\/td//g' | sed 's/,/./g' | tail -n 5 | head -n 1`
           /usr/local/zabbix/bin/zabbix_sender -z 127.0.0.1 -s SABESP -k sabesp.2 -o $vol
 	;;
-	1) vol=`lynx -source http://www2.sabesp.com.br/mananciais/DivulgacaoSiteSabesp.aspx | grep "volume armazenado" | awk -F ">" '{print $4}'  | sed 's/%<\/td//g' | sed 's/,/./g' | tail -n 6 | head -n 1`
-	   /usr/local/zabbix/bin/zabbix_sender -z 127.0.0.1 -s SABESP -k sabesp.1 -o $vol
+	1) vol=`lynx --source http://www2.sabesp.com.br/mananciais/DivulgacaoSiteSabesp.aspx | grep "volume armazenado" |  awk -F ">" '{print $4}' | sed 's/%/:/g' |  sed 's/ //g' | sed 's/,/./g' | awk -F\: '{print $2}' | tail -n 6 | head -n 1`
+           /usr/local/zabbix/bin/zabbix_sender -z 127.0.0.1 -s SABESP -k sabesp.1 -o $vol
 	;;
 	*) menu;
 	 ;;	
