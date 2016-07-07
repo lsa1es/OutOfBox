@@ -5,6 +5,7 @@ Importe o Template_Climatempo.xml
 Crie um Host seguindo a seguinte estrutura
 
 Host Name: UF
+
 Visible Name: Nome do Estado
 
 Atribua o template ao Host criado.
@@ -12,6 +13,7 @@ Atribua o template ao Host criado.
 Faça download do arquivo ClimaTempo.sh
 
 Altere as variaveis dele
+
 ZABBIX_SERVER
 
 Ponha no Crontab 
