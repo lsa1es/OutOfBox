@@ -16,7 +16,7 @@ ZABBIX_SERVER
 
 Ponha no Crontab 
 
-  */5 * * * * /root/www.redhate.me/github/OutOfBox/ClimaTempo/Climatempo.sh br >/dev/null
+  */5 * * * * /tmp/zabbix/Climatempo.sh br >/dev/null
   
 OBS.: Eu criei todas as UFs e os Estados, entao o script está enviando para todos, caso voce queira pegar uma cidade ou regiao em especifico, basta editar o script e seguir a mesma logica.
 
