@@ -1,7 +1,7 @@
 Coletando as informações de lentidão do transito conforme o site da CET SP
 
 
-Import o Template_CETSP
+Import o Template_CETSP.xml,
 
 Crie um Host com o nome de CETSP, atribua o Template_CETSP a ele.
 
