@@ -5,6 +5,7 @@ Importe o Template_Youtube.xml
 Crie um Host seguindo a seguinte estrutura
 
 Host Name: ID_DO_VIDEO ( 4ExwNEWXz38 )
+
 Visible Name: NOME_DO_VIDEO ( HOMENAGEM )
 
 Atribua o template ao Host criado.
