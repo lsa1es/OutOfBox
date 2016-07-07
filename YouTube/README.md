@@ -15,7 +15,9 @@ Faça download do arquivo youtube.sh
 Altere as variaveis dele
 
 VID = ids dos videos..
+
 Ex: https://www.youtube.com/watch?v=TiUK8oyKY70
+
 VID é o "TiUK8oyKY70"
 
 Feito isso ponha na crontab:
