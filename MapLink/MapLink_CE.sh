@@ -26,6 +26,6 @@ while [ -z "$total_transito" ]; do
         fi
 done
 
-/usr/local/zabbix/bin/zabbix_sender  -z $ZABBIX_SERVER -s Maplink_SP -k tr.total -o $total_transito
+/usr/local/zabbix/bin/zabbix_sender  -z $ZABBIX_SERVER -s Maplink_CE -k tr.total -o $total_transito
 
 
