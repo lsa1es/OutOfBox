@@ -22,7 +22,7 @@ VID é o "TiUK8oyKY70"
 
 Feito isso ponha na crontab:
 
-  */50 * * * * /tmp/zabbix/youtube.sh  >/dev/null
+	*/50 * * * * /tmp/zabbix/youtube.sh  >/dev/null
 
 OBS: O Youtube tem limite de requests da API de forma gratuita. Por isso pus a cada 50 minutos.
 
