@@ -12,10 +12,12 @@ Faça download do arquivo maplink_sp.sh
 
 Altere as variaveis dele
 
-URL= ( Endereço que da acesso total aos atributos )
-URLF= ( nome o output do $URL )
+	URL= ( Endereço que da acesso total aos atributos )
+	URLF= ( nome o output do $URL )
+	
+Ponha na crontab:
 
-  */5 * * * * /tmp/zabbix/maplink_sp.sh  >/dev/null
+	*/5 * * * * /tmp/zabbix/maplink_sp.sh  >/dev/null
 
 
 OBS.: Eu fiz apenas para SP RJ e CE, mas se voce quiser monitorar alguma cidade basta seguir a mesma linha de raciocinio.
