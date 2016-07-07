@@ -12,9 +12,9 @@ Altere as variaveis dentro dele:
 
 Coloque na crontab para coletar os dados e enviar para o Zabbix de 5 em 5 minutos.
 
-	*/5 * * * * /root/www.redhate.me/github/OutOfBox/CETSP/cetsp.sh norte
-	*/5 * * * * /root/www.redhate.me/github/OutOfBox/CETSP/cetsp.sh sul
-	*/5 * * * * /root/www.redhate.me/github/OutOfBox/CETSP/cetsp.sh leste
-	*/5 * * * * /root/www.redhate.me/github/OutOfBox/CETSP/cetsp.sh oeste
-	*/5 * * * * /root/www.redhate.me/github/OutOfBox/CETSP/cetsp.sh centro
+	*/5 * * * * /tmp/zabbix/cetsp.sh norte
+	*/5 * * * * /tmp/zabbix/cetsp.sh sul
+	*/5 * * * * /tmp/zabbix/cetsp.sh leste
+	*/5 * * * * /tmp/zabbix/cetsp.sh oeste
+	*/5 * * * * /tmp/zabbix/cetsp.sh centro
 	
