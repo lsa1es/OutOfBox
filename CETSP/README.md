@@ -1,4 +1,5 @@
-Coletando o lentidão de transito conforme o site da CET SP
+Coletando as informações de lentidão do transito conforme o site da CET SP
+
 
 Import o Template_CETSP
 
