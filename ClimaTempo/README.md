@@ -1,5 +1,7 @@
 Template para Zabbix para coleta de dados de Clima com base no site Clima Tempo
 
+Instale o lynx
+
 Importe o Template_Climatempo.xml
 
 Crie um Host seguindo a seguinte estrutura
@@ -15,6 +17,7 @@ Faça download do arquivo ClimaTempo.sh
 Altere as variaveis dele
 
 ZABBIX_SERVER
+ZABBIX_SENDER
 
 Ponha no Crontab 
 
