@@ -9,6 +9,7 @@
 
 # VARIAVEIS
 ZABBIX_SERVER="127.0.0.1"
+ZABBIX_SENDER=""
 
 var() {
         echo $1
@@ -21,13 +22,13 @@ var() {
         TempMin=`cat $1.html | grep "nima\">" | awk -Fdeg '{print $2}' | awk -Fnima\"\> '{print $2}' | awk 'NF>0' | sed 's/\&/ /g'`
         TempMax=`cat $1.html | grep "nima\">" | awk -Fdeg '{print $1}' | awk -Fxima\"\> '{print $2}' | awk 'NF>0' | sed 's/\&/ /g'`
         rm $1.html
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.temp -o $temperatura
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.sens -o $sensacao
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.umid -o $humidade
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.pres -o $pressao
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.vent -o $vento
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.tmin -o $TempMin
-        /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s $1 -k ct.tmax -o $TempMax
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.temp -o $temperatura
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.sens -o $sensacao
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.umid -o $humidade
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.pres -o $pressao
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.vent -o $vento
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.tmin -o $TempMin
+        $ZABBIX_SENDER -z $ZABBIX_SERVER -s $1 -k ct.tmax -o $TempMax
         #sleep 2s
         echo
 
