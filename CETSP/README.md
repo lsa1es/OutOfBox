@@ -12,6 +12,7 @@ Faça download do script cetsp.sh
 Altere as variaveis dentro dele:
 
 ZABBIX_SERVER - IP DO ZABBIX
+
 ZABBIX_SENDER - caminho do binario
 
 Coloque na crontab para coletar os dados e enviar para o Zabbix de 5 em 5 minutos.
