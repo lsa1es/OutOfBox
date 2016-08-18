@@ -9,6 +9,7 @@
 
 #VARIAVEIS
 ZABBIX_SERVER="127.0.0.1"
+ZABBIX_SENDER=""
 
 norte_km() {
 
@@ -54,15 +55,15 @@ help() {
 }
 
 case $1 in
-        norte) /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s CETSP -k cetsp.norte -o $(norte_km)
+        norte) $ZABBIX_SENDER -z $ZABBIX_SERVER -s CETSP -k cetsp.norte -o $(norte_km)
         ;;
-        sul) /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s CETSP -k cetsp.sul -o $(sul_km)
+        sul) $ZABBIX_SENDER -z $ZABBIX_SERVER -s CETSP -k cetsp.sul -o $(sul_km)
         ;;
-        centro)  /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s CETSP -k cetsp.centro -o $(centro_km)
+        centro)  $ZABBIX_SENDER -z $ZABBIX_SERVER -s CETSP -k cetsp.centro -o $(centro_km)
         ;;
-        leste)  /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s CETSP -k cetsp.leste -o $(leste_km)
+        leste)  $ZABBIX_SENDER -z $ZABBIX_SERVER -s CETSP -k cetsp.leste -o $(leste_km)
         ;;
-        oeste)  /usr/local/zabbix/bin/zabbix_sender -z $ZABBIX_SERVER -s CETSP -k cetsp.oeste -o $(oeste_km)
+        oeste)  $ZABBIX_SENDER -z $ZABBIX_SERVER -s CETSP -k cetsp.oeste -o $(oeste_km)
         ;;
         *) help
         ;;
