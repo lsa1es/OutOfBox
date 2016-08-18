@@ -10,6 +10,7 @@ Crie um Host com o nome de CETSP, atribua o Template_CETSP a ele.
 Faça download do script cetsp.sh
 
 Altere as variaveis dentro dele:
+
 ZABBIX_SERVER - IP DO ZABBIX
 ZABBIX_SENDER - caminho do binario
 
